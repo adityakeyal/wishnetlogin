@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.aditya.wishnetlogin.prefs.LoginSelectionDTO;
+import com.aditya.wishnetlogin.util.Connectivity;
 
 
 /**
@@ -36,13 +37,19 @@ public class LoginActivityFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 LoginSelectionDTO loginSelection = getLoginSelection();
-                if(loginSelection.isValid()){
-                    //start new task
-                    ConnectLoginAsyncTask async = new ConnectLoginAsyncTask(loginBtn);
-                    async.execute(loginSelection);
+
+                if(Connectivity.isConnectedWifi(getContext())) {
+                    if (loginSelection.isValid()) {
+                        //start new task
+                        ConnectLoginAsyncTask async = new ConnectLoginAsyncTask(loginBtn);
+                        async.execute(loginSelection);
+
+                    } else {
+                        Toast.makeText(getActivity().getBaseContext(), "Configure you preferences from Settings", Toast.LENGTH_LONG).show();
+                    }
 
                 }else{
-                    Toast.makeText(getActivity().getBaseContext(),"Configure you preferences from Settings",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity().getBaseContext(), "Cannot process. Connect to WIFI", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -54,13 +61,18 @@ public class LoginActivityFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 LoginSelectionDTO loginSelection = getLoginSelection();
-                if(loginSelection.isValid()){
-                    //start new task
-                    ConnectLogoutAsycTask async = new ConnectLogoutAsycTask(loginBtn);
-                    async.execute(loginSelection);
+                if (Connectivity.isConnectedWifi(getContext())) {
+                    if (loginSelection.isValid()) {
+                        //start new task
+                        ConnectLogoutAsycTask async = new ConnectLogoutAsycTask(loginBtn);
+                        async.execute(loginSelection);
 
-                }else{
-                    Toast.makeText(getActivity().getBaseContext(),"Configure you preferences from Settings",Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getActivity().getBaseContext(), "Configure you preferences from Settings", Toast.LENGTH_SHORT).show();
+                    }
+
+                } else {
+                    Toast.makeText(getActivity().getBaseContext(), "Cannot process. Connect to WIFI", Toast.LENGTH_LONG).show();
                 }
             }
         });
