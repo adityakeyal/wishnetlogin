@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:title="@string/user_name"
+        android:key="@string/pref_user_name"
+        android:summary="@string/pref_summ_user_name"
+        >
+        <!--<intent
+            android:targetPackage="com.example.prefs"
+            android:targetClass="com.example.prefs.SettingsActivity"
+            android:action="com.example.prefs.PREFS_ONE" />-->
+    </EditTextPreference>
+    <EditTextPreference
+        android:title="@string/password"
+        android:key="@string/pref_password"
+        android:summary="@string/pref_summ_password"
+        >
+    </EditTextPreference>
+
+    <!--<EditTextPreference-->
+        <!--android:title="@string/ip"-->
+        <!--android:key="@string/pref_ip"-->
+        <!--android:summary="@string/pref_summ_ip"-->
+        <!--&gt;-->
+    <!--</EditTextPreference>-->
+
+</PreferenceScreen>

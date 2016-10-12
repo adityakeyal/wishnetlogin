@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Wishnet Login</string>
+    <string name="action_settings">Settings</string>
+    <string name="user_name">User Name</string>
+    <string name="pref_user_name">pref_user_name</string>
+    <string name="pref_summ_user_name">Wishnet Login Username</string>
+    <string name="password">Password</string>
+    <string name="pref_password">Wishnet Password</string>
+    <string name="pref_summ_password">Wishnet Login Password</string>
+    <string name="ip">IP Address</string>
+    <string name="pref_ip">pref_ip</string>
+    <string name="pref_summ_ip">IP of Wishnet Login</string>
+    <string name="title_activity_preference">PreferenceActivity</string>
+    <string name="Complete">Complete</string>
+    <string name="Error">Error</string>
+    <string name="Upload">Upload</string>
+    <string name="action_exit">Exit</string>
+    <string name="action_home">Home</string>
+</resources>
