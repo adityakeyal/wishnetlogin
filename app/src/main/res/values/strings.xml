@@ -10,7 +10,7 @@
     <string name="ip">IP Address</string>
     <string name="pref_ip">pref_ip</string>
     <string name="pref_summ_ip">IP of Wishnet Login</string>
-    <string name="title_activity_preference">PreferenceActivity</string>
+    <string name="title_activity_preference">Settings</string>
     <string name="Complete">Complete</string>
     <string name="Error">Error</string>
     <string name="Upload">Upload</string>
