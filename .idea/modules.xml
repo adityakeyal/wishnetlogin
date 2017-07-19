@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WishnetLogin.iml" filepath="$PROJECT_DIR$/WishnetLogin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wishnetlogin.iml" filepath="$PROJECT_DIR$/wishnetlogin.iml" />
     </modules>
   </component>
 </project>
