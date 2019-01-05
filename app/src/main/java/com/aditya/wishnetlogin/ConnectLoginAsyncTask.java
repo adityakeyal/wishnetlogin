@@ -55,7 +55,7 @@ public class ConnectLoginAsyncTask extends AsyncTask<LoginSelectionDTO,Void,Inte
                 .build();
 
         Request.Builder builder = new Request.Builder()
-                .url("http://1.1.1.1/login")
+                .url("http://2.2.2.2/login")
                 .post(formBody);
         Request request = builder.build();
 
